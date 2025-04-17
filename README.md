@@ -17,4 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 I added another line here at the bottom of this page.
 
-
+For the second line is added here.

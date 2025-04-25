@@ -1,45 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:mi_card_flutter/main.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.teal,
-        appBar: AppBar(
-          backgroundColor: Colors.amber,
-          centerTitle: true,
-          title: Text('Colume Example'),
-          titleTextStyle: TextStyle(
-            color: Color(0xFF333333),
-            fontFamily: 'Verdana, Arial, Tahoma,Serif',
-            fontSize: 35,
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.normal,
-          ),
-        ),
-        body: Container(
-          color: Colors.blue,
-          child: Column(
-            //mainAxisSize: MainAxisSize. min,
-            //mainAxisAlignment: MainAxisAlignment.center,
-            //crossAxisAlignment: CrossAxisAlignment. center,
-            children: [
-              Container(color: Colors.red),
-              Text('Text 1'),
-              Text('Text 2'),
-              Text('Text 3'),
+      home: SafeArea(
+        child:Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                height: 50.0,
+                width: 50.0,
+                color: Colors.yellow,
+                child: const Text(
+                    "Text 2"
+                ),
+              ),
+              Container(
+                height: 50.0,
+                width: 50.0,
+                margin: const EdgeInsets.all(200.0),
+                padding: const EdgeInsets.all(5.0),
+                color: Colors.green,
+                child: const Text("Text 3"),
+              ),
             ],
           ),
-        ),
+        ],
       ),
+    ),
     );
   }
 }

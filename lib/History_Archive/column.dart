@@ -1,44 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:mi_card_flutter/History_Archive/flutter_layout_challenge.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SafeArea(
-        child:Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
             children: <Widget>[
-              Container(
-                height: 50.0,
-                width: 50.0,
-                color: Colors.yellow,
-                child: const Text(
-                    "Text 2"
-                ),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/isaac.JPG'),
               ),
-              Container(
-                height: 50.0,
-                width: 50.0,
-                margin: const EdgeInsets.all(200.0),
-                padding: const EdgeInsets.all(5.0),
-                color: Colors.green,
-                child: const Text("Text 3"),
+              Text(
+                  'Isaac Khup',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Pacifico',
+                  color: Colors.white,
+                ),
               ),
             ],
           ),
-        ],
+        ),
       ),
-    ),
     );
   }
 }

@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
               //Row for phone contact
               Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: ListTile(
+                child: ListTile(git push --set-upstream origin master
                   leading: Icon(
                       Icons.phone,
                       color: Colors.teal,
